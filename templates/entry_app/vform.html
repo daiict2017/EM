@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Visitor</title>
+
+{% endblock %}
+
+{% block body %}
+    <div id="container" style="color: white;">
+        <h2>Visitor checkin here</h2>
+
+<form method="post">
+    {{ form_full.as_p }}
+    {% csrf_token %}
+    <input name="Submits" type="submit">
+</form>
+</div>
+
+{% endblock %}
